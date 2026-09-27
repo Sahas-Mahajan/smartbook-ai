@@ -20,7 +20,9 @@ function BookDetails() {
         setLoading(true);
         setError("");
 
-        const response = await api.get(`/books/${id}`)
+        const response = await axios.get(
+          `http://localhost:5000/api/books/${id}`
+        );
 
         setBook(response.data.data);
 
