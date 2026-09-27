@@ -21,7 +21,7 @@ function BookDetails() {
         setError("");
 
         const response = await axios.get(
-          `http://localhost:5000/api/books/${id}`
+          `https://smartbook-ai-backend.onrender.com/api/books/${id}`
         );
 
         setBook(response.data.data);
