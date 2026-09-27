@@ -32,7 +32,7 @@ https://smartbook-ai-backend.onrender.com
 
 ### Book Discovery
 
-- Browse a collection of 130+ books
+- Browse a collection of 125+ books
 - Search books by title or author
 - Filter books by:
   - Genre
