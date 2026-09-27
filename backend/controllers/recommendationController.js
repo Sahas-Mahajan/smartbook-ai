@@ -1,5 +1,5 @@
-const User = require("../models/User");
-const Book = require("../models/Book");
+const User = require("../models/user");
+const Book = require("../models/book");
 
 const {
   generateRecommendations,
