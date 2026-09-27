@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 
 function VerifyEmail() {
   const location = useLocation();
@@ -36,8 +36,8 @@ function VerifyEmail() {
     try {
       setLoading(true);
 
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/verify-email",
+      const response = await api.post(
+        "/auth/verify-email",
         {
           email,
           verificationCode,

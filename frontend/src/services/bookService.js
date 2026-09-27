@@ -1,9 +1,7 @@
-import axios from "axios";
-
-const API_URL = "http://localhost:5000/api/books";
+import api from "../api";
 
 export const getBooks = (params = {}) => {
-  return axios.get(API_URL, {
+  return api.get("/books", {
     params: params,
   });
 };

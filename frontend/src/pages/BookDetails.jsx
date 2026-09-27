@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 
 function BookDetails() {
 
@@ -20,9 +20,7 @@ function BookDetails() {
         setLoading(true);
         setError("");
 
-        const response = await axios.get(
-          `http://localhost:5000/api/books/${id}`
-        );
+        const response = await api.get(`/books/${id}`)
 
         setBook(response.data.data);
 

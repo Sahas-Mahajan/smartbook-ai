@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import api from "../api";
 
 function ResetPassword() {
   const location = useLocation();
@@ -55,8 +55,8 @@ function ResetPassword() {
       setLoading(true);
 
       // First verify the reset code
-      await axios.post(
-        "http://localhost:5000/api/auth/verify-reset-code",
+      await api.post(
+        "/auth/verify-reset-code",
         {
           email,
           resetCode,
@@ -64,8 +64,8 @@ function ResetPassword() {
       );
 
       // Then reset the password
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/reset-password",
+      const response = await api.post(
+        "/auth/reset-password",
         {
           email,
           resetCode,

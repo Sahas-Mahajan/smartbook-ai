@@ -1,9 +1,7 @@
-import axios from "axios";
-
-const API_URL = "http://localhost:5000/api/recommendations";
+import api from "../api";
 
 export const getRecommendations = (email) => {
-  return axios.post(API_URL, {
+  return api.post("/recommendations", {
     email: email,
   });
 };
